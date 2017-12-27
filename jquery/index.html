@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    .my_class1 {
+      background: black;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+  <script src="/js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() { // эта часть всегда пишется
+      // тут пишем методы
+      $(".my_class1").mouseenter(function(){
+       $(".my_class1").animate({
+        left: '100px',
+        marginTop: '100px',
+        height: '+=100px',
+        width: '+=100px'
+      }, "slow").fadeOut(5000);
+      });
+    }); // эта закрывающая скобка тоже
+  </script>
+  <title>Fading square</title>
+</head>
+<body>
+  <h1>Fading square</h1>
+  <p><b>Наведите мышь на черный квадрат и увидите, что произойдет!</b></p>
+  <div class="my_class1"></div>
+<a href="/ball.html">Смотреть еще</a> 
+</body>
+</html>
