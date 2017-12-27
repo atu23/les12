@@ -9,30 +9,25 @@
       margin:0px;
       padding:0px;
       height: 700px;
-      width: auto;
-      background-image: url("img/net.jpg");
+      background-image: url("/img/net.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       text-align: center;
     }
-    .left {
-      width:50%;
-      height: : 700px;
-      overflow: auto;
-      float: left;
-    }
-    .right {
-      width:100%/2;
-      height: :100%;
-      overflow: auto; 
-    }
     
+    .flex_container {
+      display: flex;
+    }
+
+    .flex_container>div {
+      width: 50%;
+    }
     .none{
       display:none;
     }
-   
+      
   </style>
-  <script src="js/jquery.min.js"></script>
+  <script src="/js/jquery.min.js"></script>
   <script>
     $(document).ready(function() { // эта часть всегда пишется
       // тут пишем методы
@@ -51,8 +46,9 @@
 <body class="ball" >
   <h1>Волейбол</h1>
   <p><b>Ударьте по мячу (удар=клик)</b></p>
-  <div class="left"><img id="ball1" src="img/ball.png"></div>
-  <div class="right"><img id="ball2" class="none" src="img/ball.png"></div>
- 
+  <div class="flex_container">
+  <div><img id="ball1" src="/img/ball.png"></div>
+  <div><img id="ball2" class="none" src="/img/ball.png"></div>
+</div>
 </body>
 </html>
